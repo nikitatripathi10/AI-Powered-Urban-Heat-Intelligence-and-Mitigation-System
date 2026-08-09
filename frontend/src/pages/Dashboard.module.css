@@ -1,0 +1,76 @@
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.ambientGlow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 107, 43, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(0, 212, 170, 0.04) 0%, transparent 50%);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  padding: 16px;
+  min-width: 0;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 200px;
+    --diagnostics-width: 260px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .center {
+    min-height: 400px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: auto;
+    --bottom-panel-height: auto;
+    --sidebar-width: 100%;
+    --diagnostics-width: 100%;
+  }
+
+  .dashboard {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .center {
+    min-height: 350px;
+    padding: 8px;
+  }
+}
