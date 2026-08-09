@@ -12,12 +12,15 @@ async function request(path, options = {}) {
   return res.json();
 }
 
-export const fetchCities = () => request("/api/cities");
-export const fetchCityConfig = (city) => request(`/api/cities/${encodeURIComponent(city)}/config`);
-export const fetchHotspots = (city) => request(`/api/cities/${encodeURIComponent(city)}/hotspots`);
-export const fetchScenarios = () => request("/api/scenarios");
-export const fetchOptimizationResult = () => request("/api/optimization");
-export const fetchModelMetrics = () => request("/api/model-metrics");
+export const fetchCities             = ()           => request("/api/cities");
+export const fetchCityConfig         = (city)       => request(`/api/cities/${encodeURIComponent(city)}/config`);
+export const fetchHotspots           = (city)       => request(`/api/cities/${encodeURIComponent(city)}/hotspots`);
+export const fetchScenarios          = ()           => request("/api/scenarios");
+export const fetchOptimizationResult = ()           => request("/api/optimization");
+export const fetchModelMetrics       = ()           => request("/api/model-metrics");
+export const fetchCatalogue          = ()           => request("/api/interventions/catalogue");
+export const fetchInterventionPlan   = (city, budget) =>
+  request(`/api/interventions/plan/${encodeURIComponent(city)}?budget=${budget}`);
 
 export const runOptimization = (city, budget) =>
   request("/api/optimization/run", {

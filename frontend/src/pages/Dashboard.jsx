@@ -4,6 +4,9 @@ import Sidebar from "../components/Sidebar";
 import MapPanel from "../components/MapPanel";
 import Diagnostics from "../components/Diagnostics";
 import BottomPanel from "../components/BottomPanel";
+import InterventionPlanner from "../components/InterventionPlanner";
+import PlannerTimeline from "../components/PlannerTimeline";
+import InterventionCatalogue from "../components/InterventionCatalogue";
 import Toast from "../components/Toast";
 import { useHotspots } from "../hooks/useHotspots";
 import { useCityStats } from "../hooks/useCityStats";
@@ -14,15 +17,21 @@ import { useNotifications } from "../hooks/useNotifications";
 import styles from "./Dashboard.module.css";
 
 const DEFAULT_LAYERS = {
-  compositeRisk: true,
-  landSurfaceTemp: true,
-  vegetationCover: false,
-  populationVulnerability: true,
+  compositeRisk: true, landSurfaceTemp: true,
+  vegetationCover: false, populationVulnerability: true,
 };
 
-export default function Dashboard() {
-  const [layers, setLayers] = useState(DEFAULT_LAYERS);
-  const [budget, setBudget] = useState(65);
+const CENTER_TABS = [
+  { id: "map",      label: "Map",      icon: "◉" },
+  { id: "planner",  label: "Planner",  icon: "◆" },
+  { id: "timeline", label: "Timeline", icon: "▤" },
+];
+
+export default function Dashboard({ onNavigate }) {
+  const [layers, setLayers]               = useState(DEFAULT_LAYERS);
+  const [budget, setBudget]               = useState(65);
+  const [centerTab, setCenterTab]         = useState("map");
+  const [showCatalogue, setShowCatalogue] = useState(false);
   const { toasts, addToast, dismissToast } = useNotifications();
 
   const {
@@ -38,95 +47,89 @@ export default function Dashboard() {
   const { hour, setHour, displayHotspots, formatHour } = useHeatTimeline(filteredHotspots);
   const { isSimulating, pulseIds, toggleSimulation } = useSimulation({ setHotspots });
 
-  const handleOptimizationComplete = useCallback(
-    ({ message, type }) => {
-      addToast(message, type === "error" ? "error" : "success");
-      if (type !== "error") addToast("Risk levels reduced across target zones", "info");
-    },
-    [addToast]
-  );
+  const handleOptimizationComplete = useCallback(({ message, type }) => {
+    addToast(message, type === "error" ? "error" : "success");
+    if (type !== "error") addToast("Risk levels updated", "info");
+  }, [addToast]);
 
   const { isOptimizing, runOptimization } = useOptimization({
-    setHotspots, selectedZone, city, budget,
-    onComplete: handleOptimizationComplete,
+    setHotspots, selectedZone, city, budget, onComplete: handleOptimizationComplete,
   });
 
-  const handleToggleLayer = useCallback((layerId) => {
-    setLayers((prev) => ({ ...prev, [layerId]: !prev[layerId] }));
-  }, []);
+  const handleToggleLayer = useCallback(id => setLayers(p => ({ ...p, [id]: !p[id] })), []);
 
-  const handleCityChangeWithToast = useCallback(
-    (newCity) => {
-      handleCityChange(newCity);
-      addToast(`Switched to ${newCity}`, "info");
-    },
-    [handleCityChange, addToast]
-  );
+  const handleCityChange_ = useCallback(newCity => {
+    handleCityChange(newCity);
+    addToast(`Switched to ${newCity}`, "info");
+  }, [handleCityChange, addToast]);
 
   return (
     <div className={styles.dashboard}>
-      <div className={styles.ambientGlow} />
-
       <Navbar
-        city={city}
-        onCityChange={handleCityChangeWithToast}
-        stats={cityStats}
-        isLoading={isLoading}
+        city={city} onCityChange={handleCityChange_}
+        stats={cityStats} isLoading={isLoading}
+        onNavigate={onNavigate}
+        onShowCatalogue={() => setShowCatalogue(true)}
       />
 
       <div className={styles.main}>
         <Sidebar
-          city={city}
-          layers={layers}
-          onToggleLayer={handleToggleLayer}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          activeFilters={activeFilters}
-          onToggleFilter={toggleFilter}
-          allLevels={allLevels}
-          hotspots={hotspots}
-          stats={cityStats}
-          isLoading={isLoading}
-          hour={hour}
-          onHourChange={setHour}
-          formatHour={formatHour}
+          city={city} layers={layers} onToggleLayer={handleToggleLayer}
+          searchQuery={searchQuery} onSearchChange={setSearchQuery}
+          activeFilters={activeFilters} onToggleFilter={toggleFilter}
+          allLevels={allLevels} hotspots={hotspots} stats={cityStats}
+          isLoading={isLoading} hour={hour} onHourChange={setHour} formatHour={formatHour}
         />
 
         <div className={styles.center}>
-          <MapPanel
-            city={city}
-            cityConfig={cityConfig}
-            hotspots={displayHotspots}
-            layers={layers}
-            onZoneSelect={selectZone}
-            selectedZone={selectedZone}
-            pulseIds={pulseIds}
-            isSimulating={isSimulating}
-          />
+          <div className={styles.centerTabBar}>
+            {CENTER_TABS.map(t => (
+              <button key={t.id}
+                className={`${styles.centerTab} ${centerTab===t.id ? styles.centerTabActive : ""}`}
+                onClick={() => setCenterTab(t.id)} type="button">
+                <span className={styles.centerTabIcon}>{t.icon}</span>{t.label}
+              </button>
+            ))}
+          </div>
+
+          <div className={styles.centerContent}>
+            {centerTab === "map" && (
+              <div className={styles.mapWrap}>
+                <MapPanel
+                  city={city} cityConfig={cityConfig} hotspots={displayHotspots}
+                  layers={layers} onZoneSelect={selectZone} selectedZone={selectedZone}
+                  pulseIds={pulseIds} isSimulating={isSimulating}
+                />
+              </div>
+            )}
+            {centerTab === "planner" && (
+              <div className={styles.fullPanel}>
+                <InterventionPlanner city={city} budget={budget} />
+              </div>
+            )}
+            {centerTab === "timeline" && (
+              <div className={styles.fullPanel}>
+                <PlannerTimeline city={city} budget={budget} />
+              </div>
+            )}
+          </div>
         </div>
 
         <Diagnostics
-          city={city}
-          selectedZone={selectedZone}
-          stats={cityStats}
-          isLoading={isLoading}
-          isOptimizing={isOptimizing}
+          city={city} selectedZone={selectedZone}
+          stats={cityStats} isLoading={isLoading} isOptimizing={isOptimizing}
         />
       </div>
 
       <BottomPanel
-        budget={budget}
-        onBudgetChange={setBudget}
-        onBudgetCommit={(value) => addToast(`Budget updated to ₹${(value * 0.5).toFixed(1)}M`, "info")}
-        onReoptimize={runOptimization}
-        isOptimizing={isOptimizing}
-        stats={cityStats}
-        city={city}
-        hotspots={hotspots}
-        isSimulating={isSimulating}
-        onToggleSimulation={toggleSimulation}
+        budget={budget} onBudgetChange={setBudget}
+        onBudgetCommit={v => addToast(`Budget ₹${(v*0.5).toFixed(1)}M`, "info")}
+        onReoptimize={runOptimization} isOptimizing={isOptimizing}
+        stats={cityStats} city={city} hotspots={hotspots}
+        isSimulating={isSimulating} onToggleSimulation={toggleSimulation}
       />
 
+      {showCatalogue && <InterventionCatalogue onClose={() => setShowCatalogue(false)} />}
       <Toast toasts={toasts} onDismiss={dismissToast} />
     </div>
   );

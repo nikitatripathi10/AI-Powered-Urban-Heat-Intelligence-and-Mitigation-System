@@ -1,0 +1,39 @@
+services:
+  # ── Python FastAPI backend ──────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: therma-backend
+    restart: unless-stopped
+    environment:
+      # Tells config.py where to find ML JSON outputs inside the container
+      ML_OUTPUTS_DIR: /ml-outputs
+    volumes:
+      # Mount ML outputs as read-only so the backend can serve them
+      - ./AI/urban-heat-aiml/outputs:/ml-outputs:ro
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ── React frontend (built by Vite, served by nginx) ─────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: therma-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+networks:
+  default:
+    name: therma-net

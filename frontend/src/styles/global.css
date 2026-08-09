@@ -1,97 +1,86 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* backgrounds */
-  --bg-primary:      #070810;
-  --bg-secondary:    #0c0e1a;
-  --bg-glass:        rgba(255, 255, 255, 0.035);
-  --bg-glass-hover:  rgba(255, 255, 255, 0.065);
-  --border-glass:    rgba(255, 255, 255, 0.07);
+  --bg:          #0e0f12;
+  --bg-panel:    #13141a;
+  --bg-hover:    #1a1b22;
+  --border:      #222430;
+  --border-sub:  #1c1e27;
 
-  /* current / live accent — electric blue-teal */
-  --live-primary:    #38bdf8;
+  --accent:      #38bdf8;   /* blue  — live/current */
+  --warn:        #f97316;   /* orange — heat/cost   */
+  --good:        #4ade80;   /* green  — projected   */
+  --danger:      #f43f5e;   /* red    — extreme     */
+  --yellow:      #fbbf24;   /* yellow — moderate    */
+
+  --text:        #e2e4ea;
+  --text-sub:    #8b8fa8;
+  --text-dim:    #4a4d60;
+
+  /* legacy aliases — keep old component refs working */
+  --bg-primary:      var(--bg);
+  --bg-secondary:    var(--bg-panel);
+  --bg-glass:        var(--bg-panel);
+  --bg-glass-hover:  var(--bg-hover);
+  --border-glass:    var(--border);
+  --live-primary:    var(--accent);
   --live-secondary:  #7dd3fc;
-  --live-glow:       rgba(56, 189, 248, 0.22);
-  --live-bg:         rgba(56, 189, 248, 0.07);
-
-  /* critical / heat accent — red-orange */
-  --heat-primary:    #f97316;
+  --live-glow:       transparent;
+  --live-bg:         rgba(56,189,248,0.06);
+  --heat-primary:    var(--warn);
   --heat-secondary:  #fb923c;
-  --heat-glow:       rgba(249, 115, 22, 0.25);
-  --heat-bg:         rgba(249, 115, 22, 0.07);
-
-  /* projected / future accent — lime-green */
-  --future-primary:  #4ade80;
+  --heat-glow:       transparent;
+  --heat-bg:         rgba(249,115,22,0.06);
+  --future-primary:  var(--good);
   --future-secondary:#86efac;
-  --future-glow:     rgba(74, 222, 128, 0.22);
-  --future-bg:       rgba(74, 222, 128, 0.07);
-
-  /* alert / extreme */
-  --alert-primary:   #f43f5e;
-  --alert-glow:      rgba(244, 63, 94, 0.25);
-
-  /* text */
-  --text-primary:    #f1f5f9;
-  --text-secondary:  rgba(241, 245, 249, 0.55);
-  --text-muted:      rgba(241, 245, 249, 0.32);
-
-  /* legacy aliases kept so existing CSS doesn't break */
-  --orange-primary:  var(--heat-primary);
-  --orange-secondary:var(--heat-secondary);
-  --orange-glow:     var(--heat-glow);
-  --teal-primary:    var(--live-primary);
-  --teal-secondary:  var(--live-secondary);
-  --teal-glow:       var(--live-glow);
+  --future-glow:     transparent;
+  --future-bg:       rgba(74,222,128,0.06);
+  --alert-primary:   var(--danger);
+  --alert-glow:      transparent;
+  --text-primary:    var(--text);
+  --text-secondary:  var(--text-sub);
+  --text-muted:      var(--text-dim);
+  --orange-primary:  var(--warn);
+  --orange-secondary:#fb923c;
+  --orange-glow:     transparent;
+  --teal-primary:    var(--accent);
+  --teal-secondary:  #7dd3fc;
+  --teal-glow:       transparent;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 
-  --navbar-height:       64px;
-  --sidebar-width:       248px;
-  --diagnostics-width:   300px;
-  --bottom-panel-height: 120px;
+  --navbar-height:       52px;
+  --sidebar-width:       232px;
+  --diagnostics-width:   280px;
+  --bottom-panel-height: 112px;
 }
 
-html, body, #root {
-  height: 100%;
-  overflow: hidden;
-}
+html, body, #root { height: 100%; overflow: hidden; }
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar        { width: 3px; }
 ::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: rgba(255,255,255,0.1); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.18); }
+::-webkit-scrollbar-thumb  { background: var(--border); border-radius: 3px; }
 
-.leaflet-container  { background: #080910; font-family: var(--font-sans); }
+.leaflet-container  { background: #0a0b0e; font-family: var(--font-sans); }
 .leaflet-interactive { cursor: pointer; }
 
-@media (max-width: 992px) {
-  html, body, #root { overflow: auto; }
-}
-
+@media (max-width: 992px) { html, body, #root { overflow: auto; } }
 @media (max-width: 768px) {
-  :root {
-    --navbar-height: auto;
-    --bottom-panel-height: auto;
-  }
+  :root { --navbar-height: auto; --bottom-panel-height: auto; }
 }

@@ -1,75 +1,35 @@
 .container {
   position: fixed;
-  top: calc(var(--navbar-height) + 12px);
-  right: 16px;
+  top: calc(var(--navbar-height) + 10px);
+  right: 14px;
   z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: flex; flex-direction: column; gap: 6px;
   pointer-events: none;
 }
 
 .toast {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  background: rgba(5, 5, 5, 0.92);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 13px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   pointer-events: auto;
-  min-width: 280px;
-  max-width: 380px;
+  min-width: 240px; max-width: 340px;
 }
+.toast.success { border-left: 2px solid var(--accent); }
+.toast.info    { border-left: 2px solid var(--warn); }
+.toast.error   { border-left: 2px solid var(--danger); }
+.toast.warning { border-left: 2px solid var(--yellow); }
 
-.toast.success {
-  border-left: 3px solid var(--teal-primary);
-}
+.toastIcon { font-size: 12px; flex-shrink: 0; }
+.toast.success .toastIcon { color: var(--accent); }
+.toast.info    .toastIcon { color: var(--warn); }
+.toast.error   .toastIcon { color: var(--danger); }
 
-.toast.info {
-  border-left: 3px solid var(--orange-primary);
-}
-
-.toast.warning {
-  border-left: 3px solid #ffd700;
-}
-
-.toastIcon {
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.toast.success .toastIcon {
-  color: var(--teal-primary);
-}
-
-.toast.info .toastIcon {
-  color: var(--orange-primary);
-}
-
-.toast.warning .toastIcon {
-  color: #ffd700;
-}
-
-.toastMessage {
-  flex: 1;
-  font-size: 12px;
-  color: var(--text-primary);
-  line-height: 1.4;
-}
+.toastMessage { flex: 1; font-size: 11px; color: var(--text); line-height: 1.4; }
 
 .dismissBtn {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  font-size: 16px;
-  padding: 0 2px;
-  flex-shrink: 0;
+  background: none; border: none;
+  color: var(--text-dim); cursor: pointer; font-size: 14px; padding: 0 2px; flex-shrink: 0;
 }
-
-.dismissBtn:hover {
-  color: var(--text-primary);
-}
+.dismissBtn:hover { color: var(--text); }

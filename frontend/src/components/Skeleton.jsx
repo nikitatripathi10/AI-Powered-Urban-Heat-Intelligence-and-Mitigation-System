@@ -1,24 +1,16 @@
 import { memo } from "react";
-import { motion } from "framer-motion";
 import styles from "./Skeleton.module.css";
 
 export function SkeletonLine({ width = "100%", height = 12 }) {
-  return (
-    <motion.div
-      className={styles.skeleton}
-      style={{ width, height }}
-      animate={{ opacity: [0.4, 0.8, 0.4] }}
-      transition={{ duration: 1.5, repeat: Infinity }}
-    />
-  );
+  return <div className={styles.skeleton} style={{ width, height }} />;
 }
 
 export function SkeletonCard() {
   return (
     <div className={styles.card}>
-      <SkeletonLine width="40%" height={10} />
-      <SkeletonLine width="60%" height={24} />
-      <SkeletonLine width="30%" height={10} />
+      <SkeletonLine width="40%" height={9} />
+      <SkeletonLine width="60%" height={20} />
+      <SkeletonLine width="30%" height={9} />
     </div>
   );
 }
