@@ -1,3 +1,4 @@
+# TEAM - Vision League
 # THERMA — Urban Heat Mitigation Intelligence Platform
 
 THERMA gives city planners an AI-powered dashboard to identify urban heat-stress hotspots across Indian cities, prioritise cooling interventions, and generate actionable investment plans — all backed by a physics-informed Random Forest ML model.
