@@ -34,7 +34,7 @@ The platform moves city planners from a fragmented, manual workflow to an integr
 
 | Resource | Link |
 |---|---|
-| PPT / Presentation | [Google Drive](https://drive.google.com/drive/folders/1s83Nzx71qhdkqO9qVcY174lohAPegdSa?usp=sharing) |
+| PPT / Presentation | [Google Drive](https://drive.google.com/file/d/1-gTroSjaX6kfm8p2DoiynmhjN1JIdUj8/view?usp=sharing) |
 | Demo Video | [Google Drive](https://drive.google.com/drive/folders/1s83Nzx71qhdkqO9qVcY174lohAPegdSa?usp=sharing) |
 | Live Deployment | Not deployed — run locally using Docker (see setup below) |
 
