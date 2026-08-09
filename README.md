@@ -255,4 +255,4 @@ python src/run_pipeline.py
 
 ---
 
-Built for HackMatrix · THERMA team
+Built for HackMatrix
