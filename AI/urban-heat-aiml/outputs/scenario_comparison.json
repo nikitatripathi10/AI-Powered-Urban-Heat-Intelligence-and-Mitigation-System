@@ -1,0 +1,47 @@
+[
+  {
+    "intervention": "urban_greening",
+    "label": "Urban Greening (parks / tree planting)",
+    "n_cells_treated": 6,
+    "mean_reduction_c": 3.466,
+    "max_reduction_c": 4.109,
+    "baseline_mean_lst": 40.55,
+    "scenario_mean_lst": 40.54
+  },
+  {
+    "intervention": "green_roofs",
+    "label": "Green Roofs",
+    "n_cells_treated": 6,
+    "mean_reduction_c": 1.051,
+    "max_reduction_c": 1.781,
+    "baseline_mean_lst": 40.55,
+    "scenario_mean_lst": 40.54
+  },
+  {
+    "intervention": "tree_canopy_streets",
+    "label": "Street Tree Canopy",
+    "n_cells_treated": 6,
+    "mean_reduction_c": 0.718,
+    "max_reduction_c": 1.365,
+    "baseline_mean_lst": 40.55,
+    "scenario_mean_lst": 40.55
+  },
+  {
+    "intervention": "cool_roofs",
+    "label": "Cool / High-Albedo Roofs",
+    "n_cells_treated": 6,
+    "mean_reduction_c": 0.503,
+    "max_reduction_c": 0.616,
+    "baseline_mean_lst": 40.55,
+    "scenario_mean_lst": 40.55
+  },
+  {
+    "intervention": "reflective_pavement",
+    "label": "Reflective / Cool Pavement",
+    "n_cells_treated": 0,
+    "mean_reduction_c": 0.0,
+    "max_reduction_c": 0.0,
+    "baseline_mean_lst": 40.55,
+    "scenario_mean_lst": 40.55
+  }
+]

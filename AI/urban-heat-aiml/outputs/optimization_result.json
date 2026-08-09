@@ -1,0 +1,723 @@
+{
+  "budget": 1200,
+  "budget_used": 528.0,
+  "total_predicted_reduction_c": 202.76,
+  "mean_hotspot_reduction_c": 2.856,
+  "intervention_mix": {
+    "urban_greening": 53,
+    "tree_canopy_streets": 16,
+    "reflective_pavement": 2
+  },
+  "placements": [
+    {
+      "cell_id": 3341,
+      "lat": 23.28242252252252,
+      "lon": 77.42338661361714,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 4.197,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3550,
+      "lat": 23.286026126126124,
+      "lon": 77.39298797524157,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 4.109,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2112,
+      "lat": 23.2644045045045,
+      "lon": 77.39494917771741,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 4.018,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1802,
+      "lat": 23.2599,
+      "lon": 77.38514316533819,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 4.012,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2338,
+      "lat": 23.267107207207207,
+      "lon": 77.4400568346618,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.97,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 628,
+      "lat": 23.24188198198198,
+      "lon": 77.41063879752416,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.949,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1136,
+      "lat": 23.24908918918919,
+      "lon": 77.43809563218596,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.917,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1194,
+      "lat": 23.249990090090087,
+      "lon": 77.43613442971012,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.904,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3384,
+      "lat": 23.283323423423422,
+      "lon": 77.40671639257246,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.888,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2454,
+      "lat": 23.268909009009008,
+      "lon": 77.43613442971012,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.878,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 853,
+      "lat": 23.245485585585584,
+      "lon": 77.39592977895532,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.865,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3340,
+      "lat": 23.28242252252252,
+      "lon": 77.42240601237921,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.791,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3490,
+      "lat": 23.285125225225222,
+      "lon": 77.39298797524157,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.753,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3265,
+      "lat": 23.28152162162162,
+      "lon": 77.40769699381039,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.74,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2018,
+      "lat": 23.2626027027027,
+      "lon": 77.42044480990337,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.733,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 787,
+      "lat": 23.244584684684682,
+      "lon": 77.3900461715278,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.707,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 851,
+      "lat": 23.245485585585584,
+      "lon": 77.39396857647948,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.701,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3552,
+      "lat": 23.286026126126124,
+      "lon": 77.39494917771741,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.684,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 631,
+      "lat": 23.24188198198198,
+      "lon": 77.41358060123792,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.637,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 441,
+      "lat": 23.239179279279277,
+      "lon": 77.4037745888587,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.623,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1555,
+      "lat": 23.255395495495495,
+      "lon": 77.43711503094804,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.62,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1175,
+      "lat": 23.249990090090087,
+      "lon": 77.4175030061896,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.596,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 727,
+      "lat": 23.243683783783784,
+      "lon": 77.3900461715278,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.544,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3401,
+      "lat": 23.283323423423422,
+      "lon": 77.42338661361714,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.521,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1615,
+      "lat": 23.256296396396394,
+      "lon": 77.43711503094804,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.517,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 442,
+      "lat": 23.239179279279277,
+      "lon": 77.40475519009662,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.502,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3325,
+      "lat": 23.28242252252252,
+      "lon": 77.40769699381039,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.501,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2078,
+      "lat": 23.263503603603603,
+      "lon": 77.42044480990337,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.498,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1235,
+      "lat": 23.25089099099099,
+      "lon": 77.4175030061896,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.466,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2514,
+      "lat": 23.26980990990991,
+      "lon": 77.43613442971012,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.444,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3324,
+      "lat": 23.28242252252252,
+      "lon": 77.40671639257246,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.384,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 630,
+      "lat": 23.24188198198198,
+      "lon": 77.4126,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.374,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1193,
+      "lat": 23.249990090090087,
+      "lon": 77.4351538284722,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.372,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1742,
+      "lat": 23.258999099099096,
+      "lon": 77.38514316533819,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.3,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2397,
+      "lat": 23.268008108108106,
+      "lon": 77.43907623342389,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.288,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3489,
+      "lat": 23.285125225225222,
+      "lon": 77.39200737400364,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.287,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3400,
+      "lat": 23.283323423423422,
+      "lon": 77.42240601237921,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.254,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2394,
+      "lat": 23.268008108108106,
+      "lon": 77.43613442971012,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.252,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1135,
+      "lat": 23.24908918918919,
+      "lon": 77.43711503094804,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.241,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 852,
+      "lat": 23.245485585585584,
+      "lon": 77.39494917771741,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.162,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 913,
+      "lat": 23.246386486486486,
+      "lon": 77.39592977895532,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.16,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1195,
+      "lat": 23.249990090090087,
+      "lon": 77.43711503094804,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.152,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 443,
+      "lat": 23.239179279279277,
+      "lon": 77.40573579133455,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.147,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3399,
+      "lat": 23.283323423423422,
+      "lon": 77.4214254111413,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.126,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 503,
+      "lat": 23.24008018018018,
+      "lon": 77.40573579133455,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.11,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1174,
+      "lat": 23.249990090090087,
+      "lon": 77.41652240495168,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.068,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1234,
+      "lat": 23.25089099099099,
+      "lon": 77.41652240495168,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 3.054,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3549,
+      "lat": 23.286026126126124,
+      "lon": 77.39200737400364,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 2.992,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 3551,
+      "lat": 23.286026126126124,
+      "lon": 77.39396857647948,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 2.973,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 786,
+      "lat": 23.244584684684682,
+      "lon": 77.38906557028987,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 2.97,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 2017,
+      "lat": 23.2626027027027,
+      "lon": 77.41946420866545,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 2.968,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1616,
+      "lat": 23.256296396396394,
+      "lon": 77.43809563218596,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 2.959,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 1958,
+      "lat": 23.2617018018018,
+      "lon": 77.42044480990337,
+      "lulc": "built_up",
+      "intervention": "urban_greening",
+      "intervention_label": "Urban Greening (parks / tree planting)",
+      "predicted_reduction_c": 2.849,
+      "cost": 8.0
+    },
+    {
+      "cell_id": 788,
+      "lat": 23.244584684684682,
+      "lon": 77.39102677276571,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.656,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2110,
+      "lat": 23.2644045045045,
+      "lon": 77.39298797524157,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.362,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 1801,
+      "lat": 23.2599,
+      "lon": 77.38416256410027,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.361,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 629,
+      "lat": 23.24188198198198,
+      "lon": 77.41161939876207,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.36,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2611,
+      "lat": 23.27161171171171,
+      "lon": 77.41358060123792,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.25,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 561,
+      "lat": 23.24098108108108,
+      "lon": 77.4037745888587,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.247,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 501,
+      "lat": 23.24008018018018,
+      "lon": 77.4037745888587,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.137,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2550,
+      "lat": 23.270710810810808,
+      "lon": 77.4126,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.039,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 3460,
+      "lat": 23.284224324324324,
+      "lon": 77.42240601237921,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 1.008,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2610,
+      "lat": 23.27161171171171,
+      "lon": 77.4126,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.926,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 1862,
+      "lat": 23.2608009009009,
+      "lon": 77.38514316533819,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.903,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2393,
+      "lat": 23.268008108108106,
+      "lon": 77.4351538284722,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.861,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 1554,
+      "lat": 23.255395495495495,
+      "lon": 77.43613442971012,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.827,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2398,
+      "lat": 23.268008108108106,
+      "lon": 77.4400568346618,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.753,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2490,
+      "lat": 23.26980990990991,
+      "lon": 77.4126,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.743,
+      "cost": 6.0
+    },
+    {
+      "cell_id": 2111,
+      "lat": 23.2644045045045,
+      "lon": 77.39396857647948,
+      "lulc": "road",
+      "intervention": "reflective_pavement",
+      "intervention_label": "Reflective / Cool Pavement",
+      "predicted_reduction_c": 0.495,
+      "cost": 4.0
+    },
+    {
+      "cell_id": 2109,
+      "lat": 23.2644045045045,
+      "lon": 77.39200737400364,
+      "lulc": "road",
+      "intervention": "reflective_pavement",
+      "intervention_label": "Reflective / Cool Pavement",
+      "predicted_reduction_c": 0.48,
+      "cost": 4.0
+    },
+    {
+      "cell_id": 2399,
+      "lat": 23.268008108108106,
+      "lon": 77.44103743589973,
+      "lulc": "road",
+      "intervention": "tree_canopy_streets",
+      "intervention_label": "Street Tree Canopy",
+      "predicted_reduction_c": 0.621,
+      "cost": 6.0
+    }
+  ]
+}

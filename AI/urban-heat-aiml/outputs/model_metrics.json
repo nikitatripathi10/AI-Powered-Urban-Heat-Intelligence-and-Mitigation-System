@@ -1,0 +1,16 @@
+{
+  "mae_c": 0.729,
+  "r2": 0.974,
+  "features": [
+    "impervious_fraction",
+    "ndvi",
+    "albedo",
+    "sky_view_factor",
+    "building_height_m",
+    "building_density",
+    "inv_dist_to_water",
+    "air_temp_c",
+    "humidity_pct",
+    "wind_speed_ms"
+  ]
+}
